@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercises</title>
+    </head>
+    <body>
+      
+      <button onclick="Selection('Apple')">Apple</button>
+      <button onclick="Selection('Tomato')">Tomato</button>
+      <button onclick="Selection('Eggs')">Eggs</button>
+      <button onclick="Remove()">Clear</button>
+      <div id="cart"></div>
+
+      <input id="textbox" type="text">
+      <button onclick="cm()">Convert to cm</button>
+      <button onclick="inch()">Convert to inch</button>
+
+      
+      <script>
+
+         const textbox = document.getElementById('textbox');
+         
+         function cm() {
+            const value = textbox.value
+            const convertedValue = +value * 2.54;
+            const result = document.createElement('div');
+            result.innerText = convertedValue;
+            document.body.appendChild(result);  
+         } 
+         function inch() {
+            const value = textbox.value
+            const convertedValue = +value / 2.54;
+            const result = document.createElement('div');
+            result.innerText = convertedValue;
+            document.body.appendChild(result); 
+         }
+
+
+
+         const cart = document.getElementById('cart');
+          function Selection(food) {
+            const cartItem = document.createElement('div');
+            cartItem.innerText = food;
+            cart.appendChild(cartItem);
+            
+             
+          }
+          function Remove() {
+            cart.innerHTML = '';
+          }
+
+      </script>
+      
+            
+
+         
+
+
+
+
+
+         
+
+
+
+        
+    </body>
+</html>
