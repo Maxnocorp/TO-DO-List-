@@ -1,2 +1,2 @@
 # TO-DO-List-
-Make you goals visual
+Make your goals visual
